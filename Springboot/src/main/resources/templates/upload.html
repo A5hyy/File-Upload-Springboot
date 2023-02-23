@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Name: <span data-th-text="${name}"></span></h2>
+    <h2>Filename: <span data-th-text="${file.originalFilename}"></span></h2>
+    <h2>Content Type: <span data-th-text="${file.contentType}"></span></h2>
+    <h2>Size: <span data-th-text="${file.size}"></span></h2>
+
+    <div>
+        <!-- convert /myUploads%2F83ad0890 to ${key} -->
+        <img data-th-src="|https://datauploads.sgp1.digitaloceanspaces.com/${key}|" alt="">
+    </div>
+</body>
+</html>
+
+<!-- https://datauploads.sgp1.digitaloceanspaces.com/myUploads%2F83ad0890 -->
